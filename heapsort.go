@@ -32,7 +32,17 @@ func main() {
 	fmt.Println("Bitte eine Entertaste drücken zum beenden..... ")
 	fmt.Scanln(&i)
 }
-
+// Initialisierung: Sie initialisiert den größten Index als Wurzelindex und berechnet den Index des linken und rechten Kindes.
+// 
+// Überprüfung der Kinder: Sie überprüft, ob das linke oder rechte Kind größer ist als die Wurzel. Wenn ja, wird der Index des größten Kindes als der neue größte Index festgelegt.
+// 
+// Tauschen der Elemente: Wenn die Wurzel nicht das größte Element ist (d.h., eines der Kinder ist größer), tauscht sie die Wurzel mit dem größten Element.
+// 
+// Rekursiver Aufruf: Nach dem Tauschen könnte der getauschte Knoten die Heap-Eigenschaft verletzen.
+// Daher ruft die Funktion sich selbst rekursiv auf, um sicherzustellen, dass der getauschte Knoten und seine Kinder die Heap-Eigenschaft erfüllen.
+// 
+// Rückgabe des Heaps: Schließlich gibt die Funktion den modifizierten Heap zurück.
+// 
 func heapify(heap []int, heap_size int, root_index int) []int {
 	// Initialisiert den größten Index als Wurzelindex
 	largest := root_index
@@ -58,11 +68,16 @@ func heapify(heap []int, heap_size int, root_index int) []int {
 }
 
 // Prüft die Länge der unsortierten Liste: Wenn die Liste nur ein Element oder kein Element enthält, wird sie als sortiert betrachtet und sofort zurückgegeben.
+// 
 // Erstellt einen Heap aus der unsortierten Liste: Ein Heap ist eine spezielle Baumstruktur, in der jedes Elternelement größer oder gleich seinen Kindern ist. 
 // Dies wird erreicht, indem die heapify Funktion auf jedes Element der Liste angewendet wird, beginnend in der Mitte der Liste und rückwärts gehend.
+// 
 // Sortiert den Heap: Die heap_sort Funktion entfernt dann das größte Element (die Wurzel des Heaps) 
-// und tauscht es mit dem letzten Element des Heaps. Dieses Element wird nun als sortiert betrachtet und aus dem Heap entfernt.
+// und tauscht es mit dem letzten Element des Heaps. 
+// Dieses Element wird nun als sortiert betrachtet und aus dem Heap entfernt.
+// 
 // Der Heap wird dann erneut “geheapified”, und der Prozess wird wiederholt, bis der gesamte Heap sortiert ist.
+// 
 func heap_sort(unsorted_list []int) []int {
 	// Überprüft, ob die Liste leer oder nur ein Element enthält
 	if len(unsorted_list) <= 1 {
