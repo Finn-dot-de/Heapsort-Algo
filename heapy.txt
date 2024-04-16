@@ -1,5 +1,0 @@
-kann "in-place" und auch "out-of-place" verwendet werden überwiegend aber "out-of-place"
-Worst-Case ist wenn nichts sortiert ist dann
-Best-Case ist wenn sortiert aber umgekehrt
-ist nicht stabil
-und hat den O(n-log)
