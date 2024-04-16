@@ -8,7 +8,8 @@ import (
 
 func main() {
 	// gibt an wie oft eine zufällige Zahl gewählt werden soll
-	numNumbers := 10_0000000
+	numNumbers := 10_000
+	var i int
 
 	numbers := make([]int, numNumbers)
 	for i := 0; i < numNumbers; i++ {
@@ -24,7 +25,10 @@ func main() {
 			log.Fatalf("Fehler konnte nicht sortiert werden!!")
 		}
 	}
-	fmt.Printf("Sortierte liste: %v", numbers)
+	fmt.Printf("Sortierte liste: %v <<<<<<< \n", numbers)
+
+	fmt.Println("Bitte eine Entertaste drücken zum beenden..... ")
+	fmt.Scanln(&i)
 }
 
 func heapify(heap []int, heap_size int, root_index int) []int {
