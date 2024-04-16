@@ -15,7 +15,7 @@ func main() {
 	for i := 0; i < numNumbers; i++ {
 		numbers[i] = rand.Intn(numNumbers)
 	}
-	fmt.Printf("Unsortierte liste: %v <<<<<<<<\n", numbers)
+	fmt.Printf("Unsortierte liste: %v <<<<<<<<\n\n", numbers)
 
 	// Aufruf der Sortier Funktion
 	numbers = heap_sort(numbers)
