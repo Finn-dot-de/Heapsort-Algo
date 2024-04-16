@@ -29,7 +29,7 @@ func main() {
 	// Gibt die sortierte Liste aus
 	fmt.Printf("Sortierte liste: %v <<<<<<< \n", numbers)
 
-	fmt.Println("Bitte eine Entertaste drücken zum beenden..... ")
+	fmt.Println("\nBitte eine Entertaste drücken zum beenden..... ")
 	fmt.Scanln(&i)
 }
 // Initialisierung: Sie initialisiert den größten Index als Wurzelindex und berechnet den Index des linken und rechten Kindes.
