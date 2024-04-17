@@ -11,6 +11,7 @@ func main() {
 	numNumbers := 10_000
 	var i int
 
+	// Erstellt eine Zufällige Zahl
 	numbers := make([]int, numNumbers)
 	for i := 0; i < numNumbers; i++ {
 		numbers[i] = rand.Intn(numNumbers)
@@ -32,6 +33,7 @@ func main() {
 	fmt.Println("\nBitte eine Entertaste drücken zum beenden..... ")
 	fmt.Scanln(&i)
 }
+
 // Initialisierung: Sie initialisiert den größten Index als Wurzelindex und berechnet den Index des linken und rechten Kindes.
 // 
 // Überprüfung der Kinder: Sie überprüft, ob das linke oder rechte Kind größer ist als die Wurzel. Wenn ja, wird der Index des größten Kindes als der neue größte Index festgelegt.
