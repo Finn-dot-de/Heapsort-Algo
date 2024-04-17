@@ -7,8 +7,8 @@ import (
 )
 
 func main() {
-	// gibt an wie oft eine zufällige Zahl gewählt werden soll
-	numNumbers := 10_000
+	// gibt an wie oft eine zufällige Zahl plus den Bereich gewählt werden soll
+	numNumbers := 100_000
 	var i int
 
 	// Erstellt eine Zufällige Zahl
